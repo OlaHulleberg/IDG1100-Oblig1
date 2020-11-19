@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDG1100 OBLIG</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+
+    <!-- Syntax highlight -->
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.0/highlight.min.js"></script>
+    <script charset="UTF-8"
+    src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.0/languages/bash.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            document.querySelectorAll('pre code').forEach((block) => {
+                hljs.highlightBlock(block);
+                block.style.display = "inline-block"; // Just a hacky way of overriding HighlightJS' way of setting everything to block
+                // Very dirty, but it works.
+            });
+        });
+    </script>
+    <!-- End of Syntax highlight -->
+
+    <style>
+        body {
+            width: 50%;
+            margin: 0 auto;
+            background-color:#ddd;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        h3 {
+            font-size: 1rem;
+        }
+
+        div {
+            margin-bottom: 2em;
+            background-color: #ccc;
+            font-size: 0.9rem;
+        }
+
+        code {
+            background: #f4f4f4;
+            border: 1px solid #ddd;
+            border-left: 3px solid #f36d33;
+            color: #444;
+            page-break-inside: avoid;
+            font-family: monospace;
+            font-size: 15px;
+            line-height: 1.6;
+            max-width: 100%;
+            overflow: auto;
+            padding: 0.3em 1.5em;
+            display: inline-block; /* This is set by the Javascript anyways,
+            as HighlightJS seems to override it when highlighting a "block",
+            but it's good practice to have it here anyways, as it sort of functions
+            like a fallback for browsers without javascript enabled*/
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+<body>
+    <h1>IDG1100 OBLIG</h1>
+
+    <div>
+        <h3>1. What components are part of the Von Neuman Architecture</h3>
+        <p>CPU, Memory (RAM) and I/O (Input/Output)</p>
+    </div>
+
+    <div>
+        <h3>2. What is user space?</h3>
+        <p>It's the portion of memory where unprivileged processes run, these processes are launched by a user, hence the name user space.</p>
+    </div>
+
+    <div>
+        <h3>3. What is the shell?</h3>
+        <p>The shell is a program that exposes the operating system's services to a human user or a program. You can call it a user interface. The shell is a powerful tool for manipulating data and executing several applications under certain conditions. Shells are usually divided into two categories: CLI (Command Line Interface) and GUI (Graphical User Interface)</p>
+    </div>
+
+    <div>
+        <h3>4. Where is the shell located?</h3>
+        <p>The shell is located in the user space.</p>
+    </div>
+
+    <div>
+        <h3>5. What is the main task of the shell?</h3>
+        <p>To provide the user with an intuitive interface to perform his/her tasks. This way, we don't have to be scientists to be able to use a computer.</p>
+    </div>
+
+    <div>
+        <h3>6.What is the octal representation of a file that can be read and written only by its owner?</h3>
+        <p>600</p>
+    </div>
+
+    <div>
+        <h3>7.In UNIX systems, what is the common name of the special user that can access and modify every file?</h3>
+        <p>root</p>
+    </div>
+
+    <div>
+        <h3>8.Which file permission classes are available in UNIX systems?</h3>
+        <p>user, group and others</p>
+    </div>
+
+    <div>
+        <h3>9.As of 2020, which percentage of servers have UNIX-like OS?</h3>
+        <p>More than 70%</p>
+    </div>
+
+    <div>
+        <h3>10.The command ssh will:</h3>
+        <p>ssh stands for Secure Shell and the command will open a secure and encrypted connection between two hosts, where you can access remote terminal, file transfers and other tunneling. On linux the ssh command defaults to remote terminal. You will need a username, and normally a password to connect.</p>
+    </div>
+
+    <div>
+        <h3>11.UNIX Command: access your current working directory</h3>
+        <pre><code>pwd</code></pre>
+    </div>
+
+    <div>
+        <h3>12.UNIX Command: rename files (give an example)</h3>
+        <pre><code>mv file1 newfile1</code></pre>
+    </div>
+
+    <div>
+        <h3>13.UNIX Command: schedule the execution of programs in the future</h3>
+        <pre><code>at</code></pre>
+        <p>for instance at: 6pm tomorrow then you type in the commands to execute, and hit Control+D</p>
+    </div>
+
+    <div>
+        <h3>14.UNIX Command: Forcefully shutdown the command with process ID 123</h3>
+        <pre><code>kill -9 123</code></pre>
+        <p>SIGKILL is not catchable or ignorable, making it forceful</p>
+    </div>
+
+    <div>
+        <h3>15.UNIX Command:access your root user</h3>
+        <pre><code>sudo</code></pre>
+    </div>
+
+    <div>
+        <h3>16. Crontab scheduled: At minute 30 on Sunday.</h3>
+        <pre><code>30 * * * 0 command_to_execute</code></pre>
+    </div>
+
+    <div>
+        <h3>17. Crontab scheduled: At minute 30 on day-of-month 15.</h3>
+        <pre><code>30 * 15 * * command_to_execute</code></pre>
+    </div>
+
+    <div>
+        <h3>18. Crontab scheduled: At 05:30 on every day-of-week from Sunday through Monday in June.</h3>
+        <pre><code>30 5 * 6 0-1 command_to_execute</code></pre>
+    </div>
+
+    <div>
+        <h3>19.Script:printyour name and date</h3>
+        <pre><code>#!/bin/bash
+NAME="Ola Hulleberg"
+echo "Name: $NAME | Date: $(date)"</code></pre>
+    </div>
+
+    <div>
+        <h3>20.Script:add two numeric values, print the result</h3>
+        <pre><code>#!/bin/bash
+echo $((3+5))</code></pre>
+    </div>
+
+    <div>
+        <h3>21.Script:inputs username, prints “USERNAMEstored”</h3>
+        <pre><code>#!/bin/bash
+read USERNAME
+echo $USERNAME"stored"</code></pre>
+    </div>
+
+    <div>
+        <h3>22.Script:Store the output of the command “hostname” in a variable. Display “This script is running on _.” where “_” is the output of the “hostname” command.</h3>
+        <pre><code>#!/bin/bash
+hostvar=$(hostname)
+echo "This script is running on $hostvar."</code></pre>
+    </div>
+
+    <div>
+        <h3>23.Script:Store the output of the workingdirectory (from where the script is run) in a variable then print the variable.</h3>
+        <pre><code>#!/bin/bash
+workingdir=$(pwd)
+echo $workingdir</code></pre>
+    </div>
+
+    <div>
+        <h3>24.Create a step by step tutorial on how to create a cronjob that prints “Task scheduled at”+ DATE. Cronjob is scheduled every 30 minutes on today’s date(only today).</h3>
+            <strong>1. Run this command to retrieve the cronjob parameters:</strong></p>
+                <pre><code>echo "*/30 * $(date +%d) $(date +%m) * echo \"Task scheduled at "'$(date)'"\""</code></pre>
+            
+            <p><strong>2. Copy and paste the output and append it to the bottom of your crontab which you can open up by pasting this command:</strong><br>
+            !! BEWARE THAT PASTING THIS COMMAND MIGHT CLEAR YOUR TERMINAL !!<br>
+            !! 		  However, in most cases you can just scroll up  	  !!<br></p>
+                <pre><code>crontab -e</code></pre>
+                
+            <p><strong>3. Now make sure crontab is running by using this command:</strong></p>
+                <pre><code>sudo systemctl status crond</code></pre>
+            
+            <p>If it says <span style="color:#009900;">active (running)</span> near the top left corner, breathe out, <strong>YOU ARE DONE</strong><br>
+            <br>
+            If it says inactive (dead) near the top left corner, well, lets try starting it.<br>
+            <br>
+            <strong>4. !!ONLY IF INACTIVE!! - Run this command to start the service</strong></p>
+                <pre><code>sudo service crond start</code></pre>
+                
+            <p>Now you can go back to step 3 and retry. If it fails again, you might have to read the status message to get a bearing on what's going wrong.</p>
+    </div>
+
+    <div>
+        <h3>25.Create a script that takes an input (letter or number) that will display the answer of a question. The script should when started list a menu for the user with the different questions that can be chosen and which corresponding letter the user will have to give as input to display the answer of the desired question. One of the possible inputs the user should be able to make is "q" for quitting the script. The menu should also have a defaultcase where all the items is displayed again,or no changes is made if the user gives an invalid input.Hint: use a switch case to be able to handle the menu. Each option in the menu should lead to an echo of the answer</h3>
+<pre><code>#!/bin/bash
+
+declare -A question ans
+
+# Question 1
+question+=([1]="What is 3+7?")
+ans+=([1]="10")
+
+# Question 2
+question+=([2]="How tall is Mt. Everest?")
+ans+=([2]="8848 meters")
+
+# Question 3
+question+=([3]="Which country is the largest in size?")
+ans+=([3]="Russia")
+
+# Question 4
+question+=([4]="Which country has the largest population?")
+ans+=([4]="China")
+
+show_menu() {
+	clear
+	echo
+	echo -e "\e[1mChoose a question from the list below:\e[0m"
+	echo
+	i=1
+	for var in "${question[@]}"
+	do
+		echo "$i.	${var}"
+		let "i++"
+	done
+	echo
+	echo "Enter choice [ 1 - 4 ]"
+	read RESULT
+
+	local __resultvar=$1
+	eval $__resultvar="'$RESULT'"
+}
+
+output_question() {
+	id=$1
+
+	clear
+	echo
+	echo -e "\e[1m${question[$id]}"
+	echo -e "Answer:\e[0m \e[33m${ans[$id]}\e[39m"
+	echo
+	echo
+	echo "Press any key to continue."
+	read
+}
+
+while [ true ] ; do
+	show_menu choice
+	case $choice in
+		q)	exit ;;
+		*)	if [ -z "${question[$choice]}" ] # Check if question is set, if not loop again
+			then
+				continue
+			else
+				output_question $choice
+		fi
+	esac		
+done
+</code></pre>
+    </div>
+</body>
+</html>

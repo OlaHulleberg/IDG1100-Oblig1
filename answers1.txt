@@ -1,0 +1,19 @@
+1. What components are part of the Von Neuman Architecture
+	CPU, Memory (RAM) and I/O (Input/Output)
+	
+2. What is user space?
+	It's the portion of memory where unprivileged processes run,
+	these processes are launched by a user, hence the name user space.
+	
+3. What is the shell?
+	The shell is a program that exposes the operating system's services to a human user or a program.
+	You can call it a user interface.
+	The shell is a powerful tool for manipulating data and executing several applications under certain conditions.
+	Shells are usually divided into two categories: CLI (Command Line Interface) and GUI (Graphical User Interface)
+	
+4. Where is the shell located?
+	The shell is located in the user space.
+
+5. What is the main task of the shell?
+	To provide the user with an intuitive interface to perform his/her tasks.
+	This way, we don't have to be scientists to be able to use a computer.
